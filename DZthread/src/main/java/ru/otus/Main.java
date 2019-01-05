@@ -89,7 +89,7 @@ public class Main {
 
         endTime = System.nanoTime();
         System.out.printf("A thread-sorted array is \n");
-        System.out.println(Arrays.toString(arrayOfIntSimpleSort));
+        System.out.println(Arrays.toString(rezult));
         System.out.printf(" \n");
         System.out.printf("A time of threads-sorting is %d \n", endTime - startTime);
     }
