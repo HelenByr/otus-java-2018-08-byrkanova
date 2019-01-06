@@ -4,7 +4,6 @@ import java.util.Arrays;
 import java.util.Scanner;
 
 import static ru.otus.HelperArray.printArray;
-import static ru.otus.Sorter.shellSort;
 
 public class Main {
 
@@ -18,9 +17,10 @@ public class Main {
         int[] arrayOfInt = HelperArray.initArray(num);
         int[] arrayOfIntSimpleSort = Arrays.copyOf(arrayOfInt, arrayOfInt.length);
         int[] arrayOfIntThreadSort;
+        ShellSorter sorter = new ShellSorter();
 
         long startTime = System.nanoTime();
-        shellSort(arrayOfIntSimpleSort);
+        sorter.sort(arrayOfIntSimpleSort);
         long endTime = System.nanoTime();
 
         System.out.printf("A sorted array is \n");
@@ -28,7 +28,7 @@ public class Main {
         System.out.printf("A time of sorting is %d \n", endTime - startTime);
 
         startTime = System.nanoTime();
-        arrayOfIntThreadSort = ThreadsSorter.sort(arrayOfInt, Sorter.class, 4);
+        arrayOfIntThreadSort = ThreadsSorter.sort(arrayOfInt,  sorter, 4);
         endTime = System.nanoTime();
 
         System.out.printf("A thread-sorted array is \n");

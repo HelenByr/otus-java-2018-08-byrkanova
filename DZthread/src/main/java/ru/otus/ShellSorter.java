@@ -1,8 +1,7 @@
 package ru.otus;
 
-public class Sorter {
-
-    public static void shellSort(int[] a)
+public class ShellSorter implements SerialIntSorter {
+    public void sort(int[] a)
     {
         int temp;
         int h = 0;//величина интервала
@@ -25,4 +24,5 @@ public class Sorter {
                 a[j] = temp;
             }
     }
+
 }
