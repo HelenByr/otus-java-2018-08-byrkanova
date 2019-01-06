@@ -3,11 +3,7 @@ package ru.otus;
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
 import java.util.Arrays;
-import java.util.function.Consumer;
-
 import static ru.otus.HelperArray.mergeArrays;
-import static ru.otus.HelperArray.printArray;
-import static ru.otus.Sorter.shellSort;
 
 public class ThreadsSorter {
 
